@@ -186,21 +186,24 @@ const onInit = () => {
 
 //Functions of buttons under chart
 const dataSwap = document.getElementById('dataSwap')
+const editChartButton = document.getElementById('editChartButton')
 dataSwap.addEventListener('click', (event) => {
     event.preventDefault()
     dataSwap.innerText === 'Sum together different zones' ? dataSwap.innerText = 'Only show single zone' : dataSwap.innerText = 'Sum together different zones'
     sumValues === false ? sumValues = true : sumValues = false
     //deactivate changing chart type
     if (sumValues === true) {
+        editChartButton.classList.add('disabled')
         console.log("Chart Sum Initialized")
-        
     }
     else if (sumValues === false) {
         chartDataset = null
         postData(query).then((data) => {
             chart = buildChart(data)
+            editChartButton.classList.remove('disabled')
             console.log("Chart Sum Reset")
         })
+        console.log(editChartButton)
     }
 })
 

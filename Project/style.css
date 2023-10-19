@@ -22,14 +22,17 @@ path.leaflet-interactive:focus {
     outline: none;
 }
 
+.disabled {
+    pointer-events: none;
+}
 
-#nav-link {
+/* #nav-link {
     transition: all 0.5s ease !important;
 }
 
 #nav-link:hover {
     background-color: #c6e2ff !important;
-} 
+}  */
 
 .container {
     float: bottom;
