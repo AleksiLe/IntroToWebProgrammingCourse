@@ -1,0 +1,70 @@
+#map {
+    position: relative;
+    height: 100%;
+}
+
+#chart {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+button {
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background-color: #c6e2ff;
+    
+}
+
+path.leaflet-interactive:focus {
+    outline: none;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+/* #nav-link {
+    transition: all 0.5s ease !important;
+}
+
+#nav-link:hover {
+    background-color: #c6e2ff !important;
+}  */
+
+.container {
+    float: bottom;
+}
+
+#map-con {
+    position: relative;
+    width: 49.5vw;
+    height: 80vh;
+    float:left
+}
+
+#chart-con {
+    position: relative;
+    width:49.5vw;
+    height: 80vh;
+    float:left
+}
+
+@media (max-width: 800px){
+    #map-con{
+        height: 49.5vh;
+        width: 100vw;
+        position: relative;
+    }
+    #chart-con{
+        height: 49.5vh;
+        width: 100vw;
+        position: relative;
+    }
+
+    #chart {
+        height: auto;
+    }
+} 
